@@ -1,6 +1,7 @@
 FROM debian:stretch-slim
-MAINTAINER rbwsam <rbwsam@gmail.com>
-RUN apt update && apt install -y lib32gcc1 curl
+MAINTAINER rbwsam 
+
+RUN apt update && apt install -y lib32gcc1 curl lib32tinfo5
 RUN useradd -m steam
 USER steam
 RUN mkdir /home/steam/steamcmd
